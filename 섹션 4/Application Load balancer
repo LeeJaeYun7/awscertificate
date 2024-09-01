@@ -1,0 +1,30 @@
+
+
+1) HTTP, HTTPS 프로토콜을 사용하는 애플리케이션 로드 밸런싱에 사용
+- 리스너 프로토콜은 HTTP, HTTPS를 사용할 수 있음
+- 웹 애플리케이션 처리에 적합
+- 리스너 규칙을 기반으로 라우팅 설정이 가능함
+- 데이터 전송 보안을 위한 HTTPS 프로토콜 사용시 SSL/TLS 인증서를 배포해야 함
+- 인증서는 ACM 사용 또는 클라이언트 인증서 사용 가능
+- Application Load balancer를 AWS Web Application Firewall을 사용
+
+2) Listener 규칙
+- Host-header
+- 각 요청의 호스트 이름을 기반으로 라우팅
+
+- path-pattern
+- 요청의 URL의 경로 패턴을 기반으로 라우팅
+
+- http-header
+- 각 요청의 HTTP 헤더를 기반으로 라우팅
+
+- http-request-method(HTTP 요청 메서드)
+- 각 요청의 HTTP 요청 메서드를 기반으로 라우팅
+
+- query-string(쿼리 문자열)
+- 쿼리 문자열의 키/값 페어 또는 값을 기반으로 라우팅
+
+- source-ip(소스 IP)
+- 각 요청의 소스 IP 주소를 기반으로 라우팅
+
+
